@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>kiwi~Animation</title>
+
+    <style>
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            min-width: 0;
+        }
+
+        body {
+            background: #222;
+        }
+
+        h1 {
+            color: white;
+            margin: 0px;
+        }
+
+        .container {
+            background: #222;
+            display: grid;
+            grid-template-columns: 1fr 564px 1fr;
+            grid-template-rows: 1fr 751px 1fr;
+            width: 100%;
+            height: 100vh;
+        }
+
+        #text {
+            padding-left: 3em;
+            padding-top: 2em;
+            grid-column: 2/3;
+            grid-row: 1/2;
+            z-index: 9;
+        }
+
+        #title{
+            margin-top: 5px;
+            margin-bottom: 8px;
+        }
+
+        #description *{
+            color: rgba(255, 255, 255, 0.623);
+            margin: 1px;
+            font-size: 15px;
+            font-family: serif;
+        }
+
+
+        .adsImage {
+            background: blue;
+            grid-column: 2/3;
+            grid-row: 2/3;
+            z-index: 10;
+           
+        }
+
+        .kiwiPieces{
+            grid-column: 2/3;
+            grid-row: 2/3;
+            z-index: 30;
+            cursor: pointer;
+        }
+
+        #kiwi-1{
+            transform: translate(210px, 420px);
+        }
+        #kiwi-2{
+            transform: translate(210px, 370px);
+        }
+        #kiwi-3{
+            transform: translate(210px, 320px);
+        }
+        #kiwi-4{
+            transform: translate(210px, 270px);
+        }
+        #kiwi-5{
+            transform: translate(210px, 220px);
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div id="container" class="container">
+
+        <div class="adsImage">
+
+           <img src="img/kiwi/kiwi-battery-background.jpg">
+            <div id="time"></div>
+    </div>
+
+    <img onclick="touchedKiwi()" class="kiwiPieces" id="kiwi-1" src="img/kiwi/kiwi-1.png"> 
+    <img class="kiwiPieces" id="kiwi-2" src="img/kiwi/kiwi-2.png"> 
+    <img class="kiwiPieces" id="kiwi-3" src="img/kiwi/kiwi-3.png"> 
+    <img class="kiwiPieces" id="kiwi-4" src="img/kiwi/kiwi-4.png"> 
+    <img class="kiwiPieces" id="kiwi-5" src="img/kiwi/kiwi-5.png"> 
+
+    <!-- state script -->
+    <script src="js/anime.min.js"></script>
+    <script src="js/kiwiScript.js"></script>
+
+</body>
+
+</html>

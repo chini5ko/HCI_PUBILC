@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Animation/packMan</title>
+
+    <style>
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            min-width: 0;
+        }
+
+        body {
+            background: black;
+        }
+
+        h1 {
+            color: white;
+            margin: 0px;
+        }
+
+        .container {
+            background: rgb(31, 29, 29);
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr;
+            width: 100%;
+            height: 100vh;
+        }
+
+        .adsImage2 {
+            
+            grid-column: 3/4;
+            grid-row: 2/3;
+            z-index: 10;
+           
+        }
+
+        .adsImage {
+            
+            grid-column: 2/3;
+            grid-row: 2/3;
+            z-index: 10;
+           justify-self: center;
+        }
+
+
+
+    </style>
+</head>
+
+<body>
+
+    <div id="container" class="container">
+
+         
+        <div class="adsImage">
+
+            <svg width="1555" height="300" viewBox="0 0 1555 1598" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M799 799C1554.57 1059.5 799 799 1554.57 1059.5C1554.28 1060.33 1554 1061.17 1553.71 1062C1444.97 1374.07 1148.13 1598 799 1598C357.724 1598 0 1240.28 0 799C0 357.724 357.724 0 799 0C1147.2 0 1443.38 222.735 1552.83 533.5C1553.42 535.164 1554 536.831 1554.57 538.5C799 799 1554.57 538.5 799 799Z" fill="#F9E214"/>
+                <circle cx="1029" cy="256" r="86" fill="black"/>
+                <path id="mouth" d="M771.142 714.001L1509.5 433L1549 530.5L800.153 796.022L771.142 714.001Z" fill="#F9E214"/>
+                </svg>
+                
+   
+            
+            <!-- open Mouth
+         <svg width="1657" height="1598" viewBox="0 0 1657 1598" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M799 799C1554.57 1059.5 799 799 1554.57 1059.5C1554.28 1060.33 1554 1061.17 1553.71 1062C1444.97 1374.07 1148.13 1598 799 1598C357.724 1598 0 1240.28 0 799C0 357.724 357.724 0 799 0C1147.2 0 1443.38 222.735 1552.83 533.5C1553.42 535.164 1554 536.831 1554.57 538.5C799 799 1554.57 538.5 799 799Z" fill="#F9E214"/>
+<circle cx="1029" cy="256" r="86" fill="black"/>
+<path d="M771.142 714.001L1509.5 433L1595.5 603L1595.5 796.022L800.153 796.022L771.142 714.001Z" fill="#C4C4C4"/>
+</svg>
+
+        <svg width="1555" height="1598" viewBox="0 0 1555 1598" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M799 799C1554.57 1059.5 799 799 1554.57 1059.5C1554.28 1060.33 1554 1061.17 1553.71 1062C1444.97 1374.07 1148.13 1598 799 1598C357.724 1598 0 1240.28 0 799C0 357.724 357.724 0 799 0C1147.2 0 1443.38 222.735 1552.83 533.5C1553.42 535.164 1554 536.831 1554.57 538.5C799 799 1554.57 538.5 799 799Z" fill="#F9E214"/>
+<circle cx="1029" cy="256" r="86" fill="black"/>
+<path d="M746.055 736.266L1503.71 422.49L1545.66 517.028L777 816L746.055 736.266Z" fill="#F9E214"/>
+</svg>
+
+
+
+                 -->
+
+
+        </div>
+
+<!--
+          <div class="adsImage2">
+         
+         </div> 
+-->
+    
+
+    </div>
+
+    <!-- state script -->
+    <script src="js/anime.min.js"></script>
+    <script src="js/packMan.js"></script>
+
+</body>
+
+</html>
+
+

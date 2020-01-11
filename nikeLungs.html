@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>nike~animation</title>
+
+    <style>
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            min-width: 0;
+        }
+
+        body {
+            background: #222;
+        }
+
+        h1 {
+            color: white;
+            margin: 0px;
+        }
+
+        .container {
+            background: #222;
+            display: grid;
+            grid-template-columns: 1fr 564px 1fr;
+            grid-template-rows: 1fr 751px 1fr;
+            width: 100%;
+            height: 100vh;
+        }
+
+        .adsImage {
+            background: blue;
+            grid-column: 2/3;
+            grid-row: 2/3;
+            z-index: 10;
+           
+        }
+
+        .lungs{
+            grid-column: 2/3;
+            grid-row: 2/3;
+            z-index: 20;
+        }
+
+        #left-lung{
+            transform: translate(90px, 90px);
+        }
+        #right-lung{
+            transform: translate(100px, 90px);
+        }
+
+
+    </style>
+</head>
+
+<body>
+
+    <div id="container" class="container">
+
+        <div class="adsImage">
+
+            <img src="img/nikeLungs/nike-lungs-background.jpg" width="564px" height="751px">
+            <div id="time"></div>
+    </div>
+
+    <div class="lungs">
+        <img  id="left-lung" src="img/nikeLungs/left-lung.png" height="350px"> 
+        <img  id="right-lung"src="img/nikeLungs/right-lung.png" height="350px">     
+    </div>
+  
+
+    <!-- state script -->
+    <script src="js/anime.min.js"></script>
+    <script src="js/nikeLungsScript.js"></script>
+
+</body>
+
+</html>

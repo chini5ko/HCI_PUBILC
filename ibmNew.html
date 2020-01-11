@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Animation/Astronaut</title>
+
+    <style>
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            min-width: 0;
+        }
+
+        body {
+            background: black;
+        }
+
+        h1 {
+            color: white;
+            margin: 0px;
+        }
+
+        .container {
+            background: black;
+            display: grid;
+            grid-template-columns: 1fr 500px 1fr;
+            grid-template-rows: 1fr 650px 1fr;
+            width: 100%;
+            height: 100vh;
+        }
+
+        #text {
+            padding-left: 3em;
+            padding-top: 2em;
+            grid-column: 2/3;
+            grid-row: 1/2;
+            z-index: 9;
+        }
+
+        #title {
+            margin-top: 5px;
+            margin-bottom: 8px;
+        }
+
+        #description * {
+            color: rgba(255, 255, 255, 0.623);
+            margin: 1px;
+            font-size: 15px;
+            font-family: serif;
+        }
+
+        #astronaut {
+            margin-top: 210px;
+            grid-column: 2/3;
+            grid-row: 2/3;
+            z-index: 20;
+        }
+
+
+        #astronaut * {
+            cursor: pointer;
+        }
+
+        .adsImage {
+            background: #253333;
+            grid-column: 2/3;
+            grid-row: 2/3;
+            z-index: 10;
+
+        }
+
+        #logos {
+            margin-top: 10px;
+        }
+
+        #time {
+            grid-column: 3/4;
+            grid-row: 2/3;
+            z-index: 20;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="container" class="container">
+
+        <div class="adsImage">
+
+            <div id="text">
+
+                <div id="title">
+                    <h1>Food is <br> now <span style="color: #F2C136"> prepared </span> <br>for space</h1>
+                </div>
+                <div id="description">
+                    <p>The European Space Agency is using smarter</p>
+                    <p>research to turn 100% of an astronaut's junk</p>
+                    <p>back into food. <a href="https://www.ibm.com/smarterplanet/us/en/" target="_blank">
+                            ibm.com/smarterplanet</a></p>
+                </div>
+                <div id="logos">
+                    <img id="ibmPlanet" src="img/ibm/watsonYellowPlanet.png" height="25px"></img>
+                    <img src="img/ibm/ibmWhiteLogo.png" height="20px"></img>
+                </div>
+            </div>
+        </div>
+
+        <!-- viewBox="0 0 455 456"
+            // height and width is the space where the svg can travel along
+            -->
+        <svg onclick="stopMoving()" height="450px" width="500" id="astronaut" viewBox="0 0 470 720" fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <path id="white"
+                d="M403.5 226C403.5 243.065 449.484 254.345 446 270.5C446 275.5 438 278 437 282.5C436.296 285.029 453.229 300.752 453.5 304C454.5 316 455.332 322.146 449 333C441.475 345.899 428.967 353.34 414.5 359.243C407.794 361.979 395.134 362.035 382 361.5C376.177 361.263 367.472 354.765 358.5 347.03C345.5 334.5 337 307.5 322 307C289.5 309.5 287.5 389.524 253.5 396C244.5 397.714 222.573 404.377 210.973 410C195.5 417.5 192.5 439.5 182.5 449C167.445 459.586 144.735 454.416 134.5 449C129.237 447.185 121.756 439.229 113.421 429.5C108.54 423.803 109.83 413.35 109.022 404.5C108.607 399.958 124.639 379.838 122 377C118 370.5 95.2182 369.463 81 374.5C73 379 76.5 379 69 385.5C31.5 414.5 5.07321 398.529 0.5 357C-1.75748 336.5 9.5 290 26.5 267C34.0395 258.775 42.3424 252.65 50 247.694C56.8616 245.69 60.5 245 69 245C77.6331 244.019 94.3804 261.493 100 259.5C108.701 256.414 105 233.446 105 230.5C103 211 100.411 190.77 107.5 171.5C114.261 153.12 129 140.5 145 128.5C155.948 113.39 151.583 80.989 165 67C185.5 42 215.5 71 239 71C250.5 64 261 39.5 278.5 24.5C296.319 8.05815 323.518 0.5 340.5 0.5C402.5 5.5 437 43 437 94.5C437 121.5 430.5 137 423.5 157.5C415.95 170.956 397.421 189.196 400.306 205.5C401.066 209.794 398.915 222.711 403.5 226Z"
+                fill="white" />
+
+            <g id="yolk" filter="url(#filter0_i)">
+                <ellipse cx="354.5" cy="103.5" rx="59.5" ry="60.5" fill="#FBB400" />
+            </g>
+
+            <g id="lightEffect" filter="url(#filter1_d)">
+                <path
+                    d="M392 64.5C384.891 60.2346 374 56 365 55.5C356 55 354 55.5 349.5 56C343 57.5 334.792 60.7263 330 63C320.5 68.5 314.5 73 308.5 86.5C305 95.5 302 106 303 118.5C297.318 106.525 303 67.5 329.5 56C348.5 45.5 386.318 52.5247 392 64.5Z"
+                    fill="white" fill-opacity="0.9" />
+            </g>
+
+
+            <defs>
+                <filter id="filter0_i" x="295" y="43" width="119" height="125" filterUnits="userSpaceOnUse"
+                    color-interpolation-filters="sRGB">
+                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                    <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
+                    <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                        result="hardAlpha" />
+                    <feOffset dy="4" />
+                    <feGaussianBlur stdDeviation="4" />
+                    <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1" />
+                    <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5 0" />
+                    <feBlend mode="normal" in2="shape" result="effect1_innerShadow" />
+                </filter>
+                <filter id="filter1_d" x="279.64" y="33.3054" width="120.92" height="93.1946"
+                    filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                    <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" />
+                    <feOffset dy="4" />
+                    <feGaussianBlur stdDeviation="2" />
+                    <feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.24 0" />
+                    <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow" />
+                    <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape" />
+                </filter>
+            </defs>
+        </svg>
+
+        <div id="time"></div>
+    </div>
+
+    <!-- state script -->
+    <script src="js/anime.min.js"></script>
+    <script src="js/ibmScript.js"></script>
+
+</body>
+
+</html>
